@@ -15,7 +15,7 @@
         </div>
         <div class="money-start">
           <div class="start-btn" @click="handleStartRotate">
-            <img src="../../../assets/images/start-btn.png" alt="">
+            <img src="http://p9ubkn3w7.bkt.clouddn.com/start-btn.png" alt="">
           </div>
         </div>
       </div>

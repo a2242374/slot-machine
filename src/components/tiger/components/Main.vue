@@ -95,7 +95,7 @@ export default {
     .main-inner
       border:2px solid #F1954A
       box-sizing:border-box
-      background:#fff url(../../../assets/images/tiger-center-img.png) center center no-repeat
+      background:#fff url(http://p9ubkn3w7.bkt.clouddn.com/tiger-center-img.png) center center no-repeat
       position:relative
       height:100%
       .main-icons
@@ -110,21 +110,21 @@ export default {
           padding-top:3px
           box-sizing:border-box
         .main-icon-item-1
-          background:#fff url(../../../assets/images/anm-ico1.png) center center no-repeat
+          background:#fff url(http://p9ubkn3w7.bkt.clouddn.com/anm-ico1.png) center center no-repeat
         .main-icon-item-2
-          background:#fff url(../../../assets/images/anm-ico2.png) center center no-repeat
+          background:#fff url(http://p9ubkn3w7.bkt.clouddn.com/anm-ico2.png) center center no-repeat
         .main-icon-item-3
-          background:#fff url(../../../assets/images/anm-ico3.png) center center no-repeat
+          background:#fff url(http://p9ubkn3w7.bkt.clouddn.com/anm-ico3.png) center center no-repeat
         .main-icon-item-4
-          background:#fff url(../../../assets/images/anm-ico4.png) center center no-repeat
+          background:#fff url(http://p9ubkn3w7.bkt.clouddn.com/anm-ico4.png) center center no-repeat
         .main-icon-item-5
-          background:#fff url(../../../assets/images/anm-ico5.png) center center no-repeat
+          background:#fff url(http://p9ubkn3w7.bkt.clouddn.com/anm-ico5.png) center center no-repeat
         .main-icon-item-6
-          background:#fff url(../../../assets/images/anm-ico6.png) center center no-repeat
+          background:#fff url(http://p9ubkn3w7.bkt.clouddn.com/anm-ico6.png) center center no-repeat
         .main-icon-item-7
-          background:#fff url(../../../assets/images/anm-ico7.png) center center no-repeat
+          background:#fff url(http://p9ubkn3w7.bkt.clouddn.com/anm-ico7.png) center center no-repeat
         .main-icon-item-8
-          background:#fff url(../../../assets/images/anm-ico8.png) center center no-repeat
+          background:#fff url(http://p9ubkn3w7.bkt.clouddn.com/anm-ico8.png) center center no-repeat
         .current
           border-color:red
           z-index:1
