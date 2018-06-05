@@ -5,6 +5,8 @@
 ## Build Setup
 [在线预览](http://p9ua6x1f9.bkt.clouddn.com/index.html)
 
+![Alt text](http://p9ubkn3w7.bkt.clouddn.com/2018-06-05_162727.jpg)
+
 ``` bash
 # install dependencies
 npm install
