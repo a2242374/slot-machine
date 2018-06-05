@@ -49,7 +49,7 @@ export default {
     font-weight:bold
     border:4px solid #883f13
     .pour-num
-      margin:0 20px
+      margin:0 27px
       letter-spacing:3px
   .pour-bottom
     margin-top:10px

@@ -3,6 +3,7 @@
 > A Vue.js project
 
 ## Build Setup
+[在线预览](http://p9ua6x1f9.bkt.clouddn.com/index.html)
 
 ``` bash
 # install dependencies
