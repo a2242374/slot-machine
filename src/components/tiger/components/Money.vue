@@ -3,7 +3,7 @@
     <div class="money-box">
       <div class="add-money">
         <div class="money-show">
-          {{gold}}
+          {{this.$store.state.gold}}
         </div>
         <div class="money-insert">
           <div class="money-insert-left">

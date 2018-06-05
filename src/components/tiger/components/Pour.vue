@@ -4,7 +4,7 @@
       <span class="pour-num" v-for="item of types" :key="item.type">{{item.num | zero}}</span>
     </div>
     <div class="pour-bottom">
-      <div :class="'pour-img main-icon-item-'+item.type" @click="handleBtPour(item.type)" v-for="item of types" :key="item.type"></div>
+      <div :class="'pour-img main-icon-item-'+item.type" @click="handleBtPour(item.type)" v-for="item of this.$store.state.types" :key="item.type"></div>
     </div>
   </div>
 </template>
@@ -13,45 +13,25 @@
 export default {
   name: 'Pour',
   props: {
-    listData: Array
+    listData: Array,
+    types: Array
   },
   data () {
     return {
-      types: [{
-        type: 1,
-        num: 20
-      }, {
-        type: 2,
-        num: 0
-      }, {
-        type: 3,
-        num: 0
-      }, {
-        type: 4,
-        num: 0
-      }, {
-        type: 5,
-        num: 0
-      }, {
-        type: 6,
-        num: 0
-      }, {
-        type: 7,
-        num: 0
-      }, {
-        type: 8,
-        num: 0
-      }]
+
     }
   },
   filters: {
     zero (num) {
-      return num.toString().length < 2 ? '0' + num : num
+      if (num.toString().length === 1) {
+        return '0' + num
+      } return num
     }
   },
   methods: {
     handleBtPour (item) {
-      this.$emit('minus')
+      this.$store.commit('pourAdd', item)
+      this.$store.commit('decrement')
     }
   },
   mounted () {
@@ -69,7 +49,7 @@ export default {
     font-weight:bold
     border:4px solid #883f13
     .pour-num
-      margin:0 27px
+      margin:0 20px
       letter-spacing:3px
   .pour-bottom
     margin-top:10px

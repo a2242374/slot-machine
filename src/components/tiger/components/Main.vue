@@ -36,34 +36,39 @@ export default {
     return {
       dataList: IndexList,
       timer: null,
-      current: 5, // 当前位置
+      current: 1, // 当前位置
       multiple: 0, // 倍数
-      steep: 80 // 速度
+      steep: 80, // 速度
+      moneyList: []
     }
   },
   watch: {
     result () {
-      this.handleChangeState()
+      this.handleChangeState(this.result)
     }
   },
   methods: {
-    handleChangeState () {
+    handleChangeState (thisResult) {
       let cishu = this.current - 1
       if (this.timer) {
         clearTimeout(this.timer)
       }
       this.timer = setInterval(() => {
-        let qm = cishu % 22
-        if (qm === 0) {
-          this.dataList[21].hasClass['current'] = false
-        } else {
-          this.dataList[qm - 1].hasClass['current'] = false
-        }
+        var qm = cishu % 22
+        setTimeout(() => {
+          if (qm === 0) {
+            this.dataList[21].hasClass['current'] = false
+          } else {
+            this.dataList[qm - 1].hasClass['current'] = false
+          }
+        }, 140)
         this.dataList[qm].hasClass['current'] = true
         cishu++
         if (cishu === this.result) {
-          this.current = qm + 1
+          this.current = this.dataList[qm].type
           this.multiple = this.dataList[qm].multiple
+          this.$store.commit('changeGold', {cur: this.current, mul: this.multiple})
+          // console.log(this.multiple + '倍  位置：' + qm)
           clearInterval(this.timer)
         }
       }, this.steep)

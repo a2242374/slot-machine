@@ -6,7 +6,7 @@
           <tiger-light></tiger-light>
         </div>
         <div class="tiger-bottom">
-          <tiger-pour @getdata="handlePushData" @minus="handleMinus" :list-data="listData"></tiger-pour>
+          <tiger-pour @getdata="handlePushData" :types="this.$store.state.types" :list-data="listData"></tiger-pour>
         </div>
         <div class="tiger-right">
           <tiger-money :gold="padZreo" @addgold="handleAddGold" @start="handleStartGame"></tiger-money>
@@ -24,7 +24,6 @@ export default {
   name: 'Tiger',
   data () {
     return {
-      gold: 100,
       result: 4,
       listData: []
     }
@@ -37,7 +36,7 @@ export default {
   },
   computed: {
     padZreo () {
-      let num = this.gold
+      let num = this.$store.state.gold
       let n = 7
       let len = num.toString().length
       while (len < n) {
@@ -49,13 +48,10 @@ export default {
   },
   methods: {
     handleAddGold () {
-      this.gold++
+      this.$store.commit('increment')
     },
     handleStartGame (result) {
       this.result = result
-    },
-    handleMinus () {
-      this.gold = this.gold - 1
     },
     handlePushData (data) {
       this.listData = data
