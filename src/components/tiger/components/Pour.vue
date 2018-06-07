@@ -30,8 +30,10 @@ export default {
   },
   methods: {
     handleBtPour (item) {
-      this.$store.commit('pourAdd', item)
-      this.$store.commit('decrement')
+      if (this.$store.state.gold > 0) {
+        this.$store.commit('pourAdd', item)
+        this.$store.commit('decrement')
+      }
     }
   },
   mounted () {
@@ -63,6 +65,7 @@ export default {
       border:4px solid #F1954A
       float:left
       border-radius:3px
+      cursor:pointer
     .main-icon-item-1
       background:#FF523B url(http://p9ubkn3w7.bkt.clouddn.com/anm-ico1.png) center center no-repeat
       position:relative

@@ -22,7 +22,7 @@ export default {
   },
   computed: {
     padZreo () {
-      let num = this.multiple
+      let num = this.$store.state.winnum
       let n = 7
       let len = num.toString().length
       while (len < n) {
@@ -67,7 +67,7 @@ export default {
         if (cishu === this.result) {
           this.current = this.dataList[qm].type
           this.multiple = this.dataList[qm].multiple
-          this.$store.commit('changeGold', {cur: this.current, mul: this.multiple})
+          this.$store.commit('changeGold', {cur: this.current, mul: this.multiple, index: this.dataList[qm].type})
           // console.log(this.multiple + '倍  位置：' + qm)
           clearInterval(this.timer)
         }
